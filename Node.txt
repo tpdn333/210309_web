@@ -8,5 +8,5 @@ git scm
 $ git config --global user.name "tpdn333"
 $ git config --global user.email tpdn333@gmail.com
 
-testversion
+testversion 세번째
 
