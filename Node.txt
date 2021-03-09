@@ -10,3 +10,5 @@ $ git config --global user.email tpdn333@gmail.com
 
 testversion 세번째
 
+changes -> Message -> v check -> push
+
