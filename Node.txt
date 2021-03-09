@@ -1,0 +1,10 @@
+vscode
+git scm
+
+- git : 버전을 알아서나누어 주는 프로그램
+
+- 'git 최초 실행' 검색
+
+$ git config --global user.name "tpdn333"
+$ git config --global user.email tpdn333@gmail.com
+
