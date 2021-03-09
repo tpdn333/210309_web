@@ -11,4 +11,29 @@ $ git config --global user.email tpdn333@gmail.com
 testversion 세번째
 
 changes -> Message -> v check -> push
+ 
+java web app (어플리케이션)
+
+-front end
+web browser ( chrome, edge, explorer..)
+
+line 17이 쓰는 언어는 html, css, javascript
+
+database(sql)
+
+===================================
+w3schools.com
+
+html 코드중 자주 쓰이는 것
+
+<OO> 꺽새 안에 있는 단어 = tag
+
+tag는 browser에 보이지 않음
+
+어떤 tag는 처음과 끝에 쌍을 이루고 있음
+   <OO>___'Content'____</OO>
+시작 tag                종료 tag(/가있음)
+         =  element(요소)
+
+
 
