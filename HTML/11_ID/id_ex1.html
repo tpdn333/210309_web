@@ -1,0 +1,33 @@
+<html>
+<head>
+    <style> 
+        #DIV1{
+            color:blue;
+        }
+        #div1{
+            font-size: 30px;
+        }
+        /* 대소문자를 구분 하지않아서 컬러와 크기가 동시에 설정됨 */
+        #div2{
+            background-color: black;
+            color: white;
+        }
+        #special{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">Lorem, ipsum dolor.</div>
+    <div id="DIV1">Lorem, ipsum dolor.</div>
+    <div id="div2">Omnis, nemo distinctio!</div>
+    <div id="special">Dolorum, dicta inventore.</div>
+
+    <!-- class처럼 구분된게 아니라 명시된것 / 중복안됨-->
+    <!-- <div id="div1">Omnis, nemo distinctio!</div> 중복되도 오류가안나서 
+        본인이 잘 알아야됨-->
+    <!-- 대소문자 구분함 div != DIV -->   
+    <!-- 하지만 css 코드에서 대소문자를 구분하지 않기 때문에 css를 따라야됨 --> 
+
+</body>
+</html>
