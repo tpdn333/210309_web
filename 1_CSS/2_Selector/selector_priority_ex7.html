@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* id   : 100점
+        class   : 10점
+        element : 1점 
+        점수가 같으면 마지막에 선언된 style이 적용됨 */
+        h1 { /* 1점 */
+            color:red;
+        }
+        .note{ /* 10점 */
+            color:yellow;
+        }
+        .special{ /* 10점 */
+            color:blue;
+        }
+        h1.special{
+            color : gray;
+        }
+        .note.special { /* 20점 */
+            color:purple;
+        }
+        #head1 { /* 100점 */
+            color : pink;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="note">Lorem, ipsum dolor.</h1>
+    <h1 class="note special">Lorem, ipsum dolor.</h1>
+    <h1 id="head1" class="note special">Ipsum, ad necessitatibus!</h1>
+    <h1>Mollitia, incidunt distinctio!</h1>
+    <h1>Autem, dolore vel.</h1>
+</body>
+</html>
