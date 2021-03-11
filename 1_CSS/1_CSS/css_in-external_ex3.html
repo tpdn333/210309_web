@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <!-- html>head>link+style^body -->
 <html>
-<head>
+    <head>
+        <!-- internal -->
+        <style>
+            h1 {
+                text-decoration: underline;
+                font-size: 100px;
+            }
+        </style>
+
     <!-- external -->
     <link rel="stylesheet" href="mystyle1.css">
-    <!-- internal -->
-    <style>
-        h1 {
-            text-decoration: underline;
-            font-size: 100px;
-        }
-    </style>
+
+    <!-- internal과 external의 선택자의 우선순위가 같아 
+        마지막에 선언된게 적용 -->
 </head>
 <body>
     <!-- inline style / 우선순위 가장 높음 -->
-    <h1 style="font-size:50px;" class="error">Lorem, ipsum dolor.</h1>
+    <h1 class="error">Lorem, ipsum dolor.</h1>
 </body>
 </html>
