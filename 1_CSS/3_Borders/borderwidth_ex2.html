@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        p {
+            border-style: solid;
+        }
+        #para1{
+            /* 4면의 두께가 같음 */
+            border-width: 0px;
+        }
+        #para2{
+            border-width: 10px;
+        }
+        #para3{
+            border-width: 20px;
+        }
+        #para4{
+            /* 다르게 하고싶으면  */
+            /* 4개쓰면 (위 오른쪽 아래 왼쪽) / 시계방향 */
+            border-width: 20px 10px 5px 1px;
+        }
+        #para5 {
+            /* 3개 쓰면 (위 좌우 아래 )*/
+            border-width: 20px 10px 5px;
+        }
+        #para6 {
+            /* 2개 쓰면 (상하 좌우 )*/
+            border-width: 20px 10px;
+        }
+        #para7{
+            border-top-width: 20px;
+            border-right-width: 10px;
+            border-bottom-width: 5px;
+            border-left-width: 0px;
+        }
+    </style>
+</head>
+<body>
+    <p id="para1">Lorem, ipsum dolor.</p>
+    <p id="para2">Inventore, quas ut?</p>
+    <p id="para3">Placeat, id odit.</p>
+    <p id="para4">Amet, minus quis!</p>
+    <p id="para5">Magnam, nulla eligendi?</p>
+    <p id="para6">Magnam, nulla eligendi?</p>
+    <p id="para7">Magnam, nulla eligendi?</p>
+</body>
+</html>
