@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .staticElem {
+            width : 300px;
+            height: 200px;
+            border : 5px solid black;
+            position: static; /* 이동 X */
+            /* 위치 이동 property 
+            left, right top bottom*/
+            left: 200px; /* 왼쪽에서 멀어짐 / 오른쪽으로 이동 */
+            top: 200px;
+        }
+        .relativeElem {
+            width : 300px;
+            height: 200px;
+            border : 5px solid lightblue;
+            position: relative; /* 그 다음 Element에 영향 X */
+            /* 위치 이동 property 
+            left, right top bottom*/
+            left: 200px; /* 왼쪽에서 멀어짐 / 오른쪽으로 이동 */
+            top: 200px;
+        }
+    </style>
+</head>
+    <body>
+        <div class="staticElem"></div>
+        <hr>
+        <div class="relativeElem"></div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat asperiores laudantium vel perspiciatis facilis hic quod, quos esse sapiente nisi aliquid dolor nihil iusto suscipit vitae aspernatur mollitia sequi id?</p>
+    </body>
+</html>
