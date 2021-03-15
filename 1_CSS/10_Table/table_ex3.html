@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    p:nth-child(1){
+        background-color: blue;
+    }
+    p:nth-child(2){
+        background-color: green;
+    }
+    p:nth-child(odd){ /* 혹은 Even(짝수) */
+        text-decoration: underline;
+    }
+    table, th, td {
+        border : 1px solid black;
+    }
+    table {
+        width : 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        height: 30px;
+    }
+    tr:nth-child(odd){
+        background-color: #ccc;
+    }
+</style>
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Facilis repellat cupiditate fugiat reprehenderit.</p>
+        <p>Fugit cupiditate ullam provident atque?</p>
+        <p>Dolores aspernatur dolorem esse aliquam.</p>
+        <p>Sunt ratione voluptatem molestiae placeat?</p>
+    </div>
+<table>
+    <tr>
+        <th>Lorem.</th>
+        <th>Quisquam?</th>
+        <th>Doloribus?</th>
+    </tr>
+    <tr>
+        <td>Lorem.</td>
+        <td>Dolorum!</td>
+        <td>Quas.</td>
+    </tr>
+    <tr>
+        <td>Lorem.</td>
+        <td>Aliquam.</td>
+        <td>Veritatis!</td>
+    </tr>
+    <tr>
+        <td>Lorem.</td>
+        <td>Perferendis.</td>
+        <td>Fugiat.</td>
+    </tr>
+    <tr>
+        <td>Lorem.</td>
+        <td>Aspernatur.</td>
+        <td>Blanditiis.</td>
+    </tr>
+</table>
+</body>
+</html>
