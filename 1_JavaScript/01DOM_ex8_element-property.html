@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    </style>
+</head>
+    <body>
+        <h1 id="head1">Lorem.</h1>
+
+        <script>
+            var x = document.getElementById("head1");
+            console.log(x.innerHTML);
+
+            x.innerHTML = "hello!";
+            // console엔 h1이 찍히고 화면엔 hello로 바뀐다.
+            console.log(x.innerHTML);
+            // 그리고 다시 console에 hello가 찍힌다
+        </script>
+    </body>
+</html>
