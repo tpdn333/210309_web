@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    </style>
+</head>
+    <body>
+        <h1 class="header">Lorem.</h1>
+        <h1 class="header para">Aliquam.</h1>
+        <h1 class="header para">Doloremque.</h1>
+
+        <script>
+            // .header 클래스중 첫번째만 반환해줌
+            var x = document.querySelector(".header");
+            console.log(x.innerHTML);
+
+            var y = document.querySelector(".para");
+            console.log(y.innerHTML);
+
+            var z = document.querySelector("h1:nth-child(3)");
+            console.log(z.innerHTML);
+            
+        </script>
+    </body>
+</html>
