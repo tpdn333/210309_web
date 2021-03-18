@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    </style>
+</head>
+    <body>
+        <script>
+            myFun(); 
+            function myFun(params) {
+                console.log("abs");
+            }
+            // myFun();
+            // 함수 호출이 function 위에있나 아래에있나 결과는 같다
+            // script가 function을 맨위로 끌어올린다 : hoisting
+
+            // 변수에 함수를 할당 ( function name을 없이 선언)
+            // 그럼 hoisting이 되지 않는다.
+            var func2 = function (params) {
+                console.log("no name");                
+            }
+            func2();
+        </script>
+    </body>
+</html>
