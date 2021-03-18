@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../0_HTML/1_CSS/7_Icon/all.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <button onclick="chagneImage(this)" id="button1">audi</button>
+    <button onclick="chagneImage(this)" id="button2">benz</button>
+    <button onclick="chagneImage(this)" id="button3">tesla</button>
+    <button onclick="chagneImage(this)" id="button4">gv70</button>
+    <hr>
+    <img id="img1" src="" alt="">
+    <script>
+        function chagneImage(elem) {
+            document.getElementById("img1").src = elem.innerHTML + ".jfif";
+            
+        }
+    </script>
+</body>
+
+</html>
