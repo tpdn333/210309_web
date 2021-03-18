@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../0_HTML/1_CSS/7_Icon/all.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <input type="text" id="input1"><br>
+    <input type="text" id="input2"><br>
+
+    <button onclick="process()"><i class="fas fa-plus"></i></button><br>
+    <input type="text" id="result">
+    <script>
+        function process() {
+            var a = Number(document.getElementById("input1").value);
+            var b = Number(document.getElementById("input2").value);
+            var c = add(a,b);
+            document.getElementById("result").value = c;
+        }
+
+        function add(param1, param2) {
+            return param1 + param2;
+            // return Number(param1) + Number(param2);
+        }
+    </script>
+</body>
+
+</html>
