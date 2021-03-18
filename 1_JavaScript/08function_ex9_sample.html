@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../0_HTML/1_CSS/7_Icon/all.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    화씨 :
+    <input type="text" id="input1">
+
+    <button onclick="process()" id="button1">섭씨로 변환</button>
+    <br>
+
+    섭씨 :
+    <input type="text" readonly="readonly" id="input2">
+
+    <script>
+        function toCelsius(fahrenheit) {
+            return (5 / 9) * (fahrenheit - 32);
+        }
+
+        function process() {
+            var val = document.getElementById("input1").value;
+            var celsius = toCelsius(val);
+            // iunput1 아이디를 가진 element를 document에서 얻어서
+            // value 속성을 읽어 변수에 저장
+            // toCelsius 함수를 호출한 결과를 celsius 변수에 할당
+            document.getElementById("input2").value = celsius;
+        }
+    </script>
+
+</body>
+
+</html>
