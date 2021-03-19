@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../0_HTML/1_CSS/7_Icon/all.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <script>
+        function start() {
+            console.log(this.name + "(이)가 출발 합니다");
+        }
+        // 객체 안에 name값을 가져온다.
+        var kar = {
+            name: "volvo",
+            start: start
+        };
+        var car = {
+            name: "fiat",
+            start: start
+        };
+
+        car.start(); // fiat
+        kar.start(); // volvo
+    </script> 
+</body>
+
+</html>
