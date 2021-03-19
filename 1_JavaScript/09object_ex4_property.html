@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../0_HTML/1_CSS/7_Icon/all.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <script>
+        var car = {
+            name: "kia",
+            model: 500
+        };
+
+        var cname = "tesla";
+        var car2 = {
+            name: cname,
+            model: 600
+        };
+        console.log(car2.name);
+
+        var name = "hyundai";
+        var car3 = {
+            name: name,
+            model: 300
+        };
+
+        console.log(car3.name);
+
+        var car4 = car3;
+        car4.name = "benz";
+
+        console.log(car3.name);
+    </script>
+</body>
+
+</html>
