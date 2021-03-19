@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../0_HTML/1_CSS/7_Icon/all.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <input type="text" id="input1" size="10px">
+    <input type="text" id="input2" size="10px">
+
+    <button onclick="diff()">두 값의 차</button>
+    <p>두 값의 차이는 <span id="result"></span>입니다.</p>
+    <p>두 값의 차이는 <span class="result2"></span>입니다.</p>
+
+    <script>
+        function diff() {
+            var a = Number(document.getElementById("input1").value);
+            var b = Number(document.getElementById("input2").value);
+            document.getElementById("result").innerHTML = Math.abs(a - b);
+            document.getElementsByClassName("result2")[0].innerHTML = Math.abs(a - b);
+            // var c = Math.abs(a - b);
+            // document.getElementById("result").innerHTML = c;
+        }
+        document.write(Math.abs(3), '<br>');
+        document.write(Math.abs(0), '<br>');
+        document.write('-3의 절대값 ', Math.abs(-3), '<br>');
+        document.write('0과 1사이의 랜덤한 수: ', Math.random(), '<br>');
+        document.write('cos 파이는', Math.cos(Math.PI), '<br>');
+    </script>
+</body>
+
+</html>
