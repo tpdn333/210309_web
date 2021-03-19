@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../0_HTML/1_CSS/7_Icon/all.min.css">
+    <style>
+        #container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        #container>div {
+            border: 3px solid gray;
+        }
+
+        #display, #result {
+            width: 400px;
+            height: 80px;
+            font-size: 60px;
+            font-weight: bold;
+            text-align: right;
+            padding-right: 8px;
+        }
+
+        .buttonWrap {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .buttonWrap button {
+            width: 100px;
+            height: 80px;
+            font-size: 20px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- .container>div>div>input#display^div>input#result^^div>div.buttonWrap>button*4[onclick]^^div>div.buttonWrap>button*4[onclick]^^div>div.buttonWrap>button*4[onclick]^^div>div.buttonWrap>button*4[onclick]^^div>div.buttonWrap>button*3[onclick]+button[style=width:200px][onclick] -->
+    <div class="container">
+        <div>
+            <div><input type="text" id="display"></div>
+            <div><input type="text" id="result"></div>
+        </div>
+        <div>
+            <div class="buttonWrap">
+                <button onclick="push('%')">%</button>
+                <button onclick="reset()">C</button>
+                <button onclick="del()">del</button>
+                <button onclick="push('/')">/</button>
+            </div>
+        </div>
+        <div>
+            <div class="buttonWrap">
+                <button onclick="push(9)">9</button>
+                <button onclick="push(8)">8</button>
+                <button onclick="push(7)">7</button>
+                <button onclick="push('*')">*</button>
+            </div>
+        </div>
+        <div>
+            <div class="buttonWrap">
+                <button onclick="push(4)">4</button>
+                <button onclick="push(5)">5</button>
+                <button onclick="push(6)">6</button>
+                <button onclick="push('+')">+</button>
+            </div>
+        </div>
+        <div>
+            <div class="buttonWrap">
+                <button onclick="push(3)">3</button>
+                <button onclick="push(2)">2</button>
+                <button onclick="push(1)">1</button>
+                <button onclick="push(-)">-</button>
+            </div>
+        </div>
+        <div>
+            <div class="buttonWrap">
+                <button onclick="push(0)">0</button>
+                <button onclick="push('.')">.</button>
+                <button onclick="calc()">=</button>
+                <button style="width:100px" onclick="">
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function push(char) {
+            // document.getElementById("input1").value = char;
+            var display = document.getElementById("display");
+            display.value = display.value + char;
+        }
+        function reset() {
+            document.getElementById("display").value = "";
+            document.getElementById("result").value = "";
+        }
+        function del() {
+            var display = document.getElementById("display");
+            display.value = display.value.substring(0, display.value.length - 1,);
+        }
+        function calc() {
+            var display = document.getElementById("display");
+            var result = eval(display.value);
+            document.getElementById("result").value = result;
+        }
+    </script>
+</body>
+
+</html>

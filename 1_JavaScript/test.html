@@ -4,38 +4,66 @@
 <head>
     <link rel="stylesheet" href="../0_HTML/1_CSS/7_Icon/all.min.css">
     <style>
+        .buttonNum {
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        .buttonOp {
+            font-size: 20px;
+            margin-left: 10px;
+        }
     </style>
 </head>
 
 <body>
     입력 : <input type="text" id="input1"><br>
     <!-- 7 8 9 -->
-    <button onclick="push(7)" id="button7"><i class="fas fa-square"></i></button>
-    <button onclick="push(8)" id="button8"><i class="fas fa-square"></i></button>
-    <button onclick="push(9)" id="button9"><i class="fas fa-square"></i></button><br>
+    <button onclick="push(7)" class="buttonNum"><i class="fas fa-square"></i></button>
+    <button onclick="push(8)" class="buttonNum"><i class="fas fa-square"></i></button>
+    <button onclick="push(9)" class="buttonNum"><i class="fas fa-square"></i></button>
+    <button onclick="reset()" class="buttonNum"><i class="fas fa-copyright"></i></button><br>
     <!-- 4 5 6 -->
-    <button onclick="push(4)" id="button4"><i class="fas fa-square"></i></button>
-    <button onclick="push(5)" id="button5"><i class="fas fa-square"></i></button>
-    <button onclick="push(6)" id="button6"><i class="fas fa-square"></i></button><br>
+    <button onclick="push(4)" class="buttonNum"><i class="fas fa-square"></i></button>
+    <button onclick="push(5)" class="buttonNum"><i class="fas fa-square"></i></button>
+    <button onclick="push(6)" class="buttonNum"><i class="fas fa-square"></i></button>
+    <button onclick="del()" class="buttonNum"><i class="fas fa-backspace"></i></button> <br>
     <!-- 1 2 3  -->
-    <button onclick="push(1)" id="button1"><i class="fas fa-square"></i></button>
-    <button onclick="push(2)" id="button2"><i class="fas fa-square"></i></button>
-    <button onclick="push(3)" id="button3"><i class="fas fa-square"></i></button><br>
+    <button onclick="push(1)" class="buttonNum"><i class="fas fa-square"></i></button>
+    <button onclick="push(2)" class="buttonNum"><i class="fas fa-square"></i></button>
+    <button onclick="push(3)" class="buttonNum"><i class="fas fa-square"></i></button>
+    <button onclick="calc()" class="buttonNum"><i class="fas fa-equals"></i></button> <br>
     <!-- + - * / -->
-    <button onclick="push('+')" id="plus"><i class="fas fa-plus"></i></button>
-    <button onclick="push('-')" id="minus"><i class="fas fa-minus"></i></button>
-    <button onclick="push('*')" id="times"><i class="fas fa-times"></i></button>
-    <button onclick="push('/')" id="divide"><i class="fas fa-divide"></i></button><br>
+    <button onclick="push('+')" class="buttonOp"><i class="fas fa-plus"></i></button>
+    <button onclick="push('-')" class="buttonOp"><i class="fas fa-minus"></i></button>
+    <button onclick="push('*')" class="buttonOp"><i class="fas fa-times"></i></button>
+    <button onclick="push('/')" class="buttonOp"><i class="fas fa-divide"></i></button><br>
     결과 : <input type="text" id="result"><br>
 
     <script>
         function push(char) {
-            var display = document.getElementById("input1").value;
-            display += char;
+            // document.getElementById("input1").value = char;
+            var display = document.getElementById("input1");
+            display.value = display.value + char;
         }
-      
+        function reset() {
+            document.getElementById("input1").value = "";
+            document.getElementById("result").value = "";
+        }
+        function del() {
+            var display = document.getElementById("input1");
+            display.value = display.value.substring(0, display.value.length - 1,);
+        }
+        function calc() {
+            var display = document.getElementById("input1");
+            var result = eval(display.value);
+            document.getElementById("result").value = result;
+        }
 
     </script>
+
+    <!-- .container>div>div>input#display^div>input#result^^div>div.buttonWrap>button*4[onclick]^^div>div.buttonWrap>button*4[onclick]^^div>div.buttonWrap>button*4[onclick]^^div>div.buttonWrap>button*4[onclick]^^div>div.buttonWrap>button*3[onclick]+button[style=width:200px][onclick] -->
+    
 </body>
 
 </html>
