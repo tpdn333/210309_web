@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../0_HTML/1_CSS/7_Icon/all.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <script>
+        // 0 이상 1미만
+        var r = Math.random();
+        console.log(r);
+        document.write(r, '<br>');
+
+        // 곱하기 10 / 0 <= r < 10
+        r = r * 10;
+        document.write(r, '<br>');
+
+        // 소수점 이하 버리기 / 0<= r <=9
+        document.write(Math.floor(r), '<br>');
+
+        // 더하기 1 / 1 <= r <= 10
+        r += 1;
+        document.write(Math.floor(r), '<br>');
+    </script>
+</body>
+
+</html>

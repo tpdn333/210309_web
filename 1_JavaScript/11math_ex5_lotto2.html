@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../0_HTML/1_CSS/7_Icon/all.min.css">
+    <style>
+        .result {
+            font-size: 30px;
+            margin-left: 10px;
+            width: 50px;
+            height: 50px;
+            background-color: green;
+            color: white;
+            border: 3px solid lightgreen;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="lotto()">번호 추첨</button>
+
+    <div class="result"></div>
+    <div class="result"></div>
+    <div class="result"></div>
+    <div class="result"></div>
+    <div class="result"></div>
+    <div class="result"></div>
+    <script>
+        function lotto() {
+            var num = document.getElementsByClassName("result");
+            for (var i = 0; i < 6; i++) {
+                num[i].innerHTML = Math.floor(Math.random() * 45) + 1;
+            };
+            // num[0].innerHTML = Math.floor(Math.random() * 45) +1;
+            // num[1].innerHTML = Math.floor(Math.random() * 45) +1;
+            // num[2].innerHTML = Math.floor(Math.random() * 45) +1;
+            // num[3].innerHTML = Math.floor(Math.random() * 45) +1;
+            // num[4].innerHTML = Math.floor(Math.random() * 45) +1;
+            // num[5].innerHTML = Math.floor(Math.random() * 45) +1;
+
+
+
+        }
+    </script>
+</body>
+
+</html>
