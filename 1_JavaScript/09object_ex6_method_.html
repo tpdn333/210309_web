@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../0_HTML/1_CSS/7_Icon/all.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <script>
+        // method는 object의 function
+
+        function funcName(x, y) {
+            console.log("statements.....");
+        };
+
+
+        var car = {
+            name: "fiat",    // property
+            model: 500,
+            start: function (x, y) {  // method
+                console.log("statement......");
+            }
+        };
+
+        console.log(car.name);
+        funcName();
+        car.start();  // 객체 안에 함수 호출
+    </script>
+</body>
+
+</html>
