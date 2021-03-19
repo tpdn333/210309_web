@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../0_HTML/1_CSS/7_Icon/all.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <input type="text" id="input1">
+    <button onclick="area(), round()">원의 넓이 구하기</button><br>
+    <!-- <input type="text" id="input2">
+    <button onclick="round()">원의 둘레 구하기</button> -->
+    <p>원의 넓이는 <span id="result1"></span> 입니다.</p>
+    <p>원의 둘레는 <span id="result2"></span> 입니다.</p>
+    <script>
+        function area() {
+            var r = document.getElementById("input1").value;
+            document.getElementById("result1").innerHTML = r * r * Math.PI;
+        }
+        function round() {
+            var r2 = document.getElementById("input1").value;
+            document.getElementById("result2").innerHTML = 2 * Math.PI * r2;
+        }
+        var c = Math.PI;
+        console.log(c);
+        console.log(Math.PI);
+        document.write(c, '<br>');
+        document.write(Math.PI, '<br>');
+    </script>
+</body>
+
+</html>
