@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../0_HTML/1_CSS/7_Icon/all.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <select onchange="func()" name="" id="select1">
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
+    </select>
+
+    <p id="result"></p>
+
+    <script>
+
+        function func() {
+            var score = document.getElementById("select1").value;
+            var result = "";
+            switch (score) {
+                case "A":
+                    result = "90점 이상"
+                    break;
+                case "B":
+                    result = "80점 이상"
+                    break;
+                case "C":
+                    result = "70점 이상"
+                    break;
+                case "D":
+                    result = "60점 이상"
+                    break;
+                default:
+                    reslut = "탈락입니다";
+                    break;
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>
