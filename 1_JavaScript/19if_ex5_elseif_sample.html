@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../0_HTML/1_CSS/7_Icon/all.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    점수 : <input type="text">
+    <br>
+    <button onclick="grade()">확인</button>
+    <p id="result"></p>
+    <script>
+        function grade() {
+            var score = document.querySelector("input").value;
+            score = Number(score);
+
+            if (score > 90) {
+                document.getElementById('result').innerHTML = 'A 학점';
+            } else if(score > 80){
+                document.getElementById('result').innerHTML = 'B 학점';
+            }
+            document.getElementById('result').innerHTML = 'C 학점';
+
+        }
+    </script>
+</body>
+
+</html>
