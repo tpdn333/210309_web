@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../0_HTML/1_CSS/7_Icon/all.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    입력 : <input type="text">
+    <button onclick="add()" class="fas fa-plus"></button>
+    <ul id="result"></ul>
+    <script>
+        function add() {
+            var text = document.querySelector("input").value;
+            var ul = document.getElementById('result');
+            text = text.trim();
+            if (!text) {
+                alert("텍스트를 입력해주세요.");
+            } else {
+                ul.innerHTML += "<li>" + text + "</li>";
+            }
+            // var text = document.querySelector("input").value;
+            // var ul = document.getElementById('result');
+            // ul.innerHTML += "<li>" + text + "</li>";
+        }
+    </script>
+</body>
+
+</html>
