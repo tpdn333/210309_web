@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../0_HTML/1_CSS/7_Icon/all.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <script>
+        // 논리 연산자
+        // ! (not)
+        document.write('-not-', '<br>');
+        var a = true;
+        document.write(a, '<br>');
+        document.write(!a, '<br>');
+        
+        var b = false;
+        document.write(b, '<br>');
+        document.write(!b, '<br>');
+
+        // && (and)
+        // 양변이 true일 때만 true
+        // 나머지는 모두 false
+        document.write('-and-', '<br>');
+        document.write(true && true, '<br>');
+        document.write(true && false, '<br>');
+        document.write(false && true, '<br>');
+
+        // || (and)
+        document.write('-or-', '<br>');
+        document.write(true || true, '<br>');   //true
+        document.write(true || false, '<br>');  // true
+        document.write(false || true, '<br>');  // true
+        document.write(false || false, '<br>'); // false
+
+    </script>
+</body>
+
+</html>
