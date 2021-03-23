@@ -62,6 +62,33 @@
             text += '<br>';
         }
         document.getElementById("result4").innerHTML = text;
+
+        var answer = [];
+        numLen = Math.floor(Math.random() * 99) + 2;
+        var number = [];
+        for (var i = 0; i < numLen; i++) {
+            kk = Math.floor(Math.random() * 100);
+            number.push(kk);
+        }
+        console.log(number);
+        for (var i = 0; i < numLen; i++) {
+            for (var j = i + 1; j < numLen; j++) {
+                answer.push(number[i] + number[j]);
+            }
+        }
+        console.log(answer);
+        var numSort = answer.sort(function (a, b) {
+            return a - b;
+        });
+        for (var i = 0; i < numSort.length; i++) {
+            if (numSort[i] == numSort[i + 1]) {
+                delete numSort[i];
+            }
+        }
+        document.write(numSort);
+        console.log(numLen);
+        console.log(numSort);
+
     </script>
 </body>
 
