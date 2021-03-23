@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../0_HTML/1_CSS/7_Icon/all.min.css">
+    <style>
+        * {
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="result"></div>
+    <hr>
+    <div id="result2"></div>
+    <hr>
+    <div id="result3"></div>
+    <hr>
+    <div id="result4"></div>
+    <hr>
+    <script>
+        // result1
+        var text = '';
+        for (var i = 0; i < 5; i++) {
+            for (var j = 0; j <= i; j++) {
+                text += '*';
+            }
+            text += '<br>';
+        }
+        document.getElementById("result").innerHTML = text;
+        // result2
+        var text = '';
+        for (var i = 5; i > 0; i--) {
+            for (var j = 0; j < i; j++) {
+                text += '*';
+            }
+            text += '<br>';
+        }
+        document.getElementById("result2").innerHTML = text;
+        // result3
+        var text = '';
+        for (var i = 5; i > 0; i--) {
+            for (var k = 5; k > i; k--) {
+                text += '&nbsp;';
+            }
+            for (var j = 0; j < i; j++) {
+                text += '*';
+            }
+            text += '<br>';
+        }
+        document.getElementById("result3").innerHTML = text;
+        // result4
+        var text = '';
+        for (var i = 5; i > 0; i--) {
+            for (var k = 1; k < i; k++) {
+                text += '&nbsp;';
+            }
+            for (var j = 5; j >= i; j--) {
+                text += '*';
+            }
+            text += '<br>';
+        }
+        document.getElementById("result4").innerHTML = text;
+    </script>
+</body>
+
+</html>
