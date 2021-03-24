@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../0_HTML/1_CSS/7_Icon/all.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <div id="result"></div>
+    <script>
+        var text = "";
+        var i = 2;
+        var j = 1;
+        while (i < 10) {
+            text += i + '단' + '<br>';
+            while (j < 10) {
+                text += i + ' X ' + j + ' = ' + (i * j) + '<br>';
+                j++;
+            }
+            j = 1;
+            i++;
+        }
+        document.getElementById("result").innerHTML = text;
+    </script>
+</body>
+
+</html>
