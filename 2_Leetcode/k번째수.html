@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../0_HTML/1_CSS/7_Icon/all.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <script>
+        var arr1 = [2, 5, 7, 3, 4, 7, 2, 4, 8, 4, 4, 23, 8, 9, 54, 41, 125, 34,];
+        var coms = [[2, 7, 4], [6, 9, 3], [10, 10, 1], [2, 9, 4]];
+        function solution(array, commands) {
+            var answer = [];
+            for (var i = 0; i < commands.length; i++) {
+                var subArray = array.slice(commands[i][0] - 1, commands[i][1]);
+                subArray.sort(function (a, b) {
+                    return a - b;
+                });
+                answer.push(subArray[commands[i][2] - 1]);
+            }
+            return answer;
+        }
+        // solution(arr1, coms);
+        console.log(solution(arr1, coms));
+    </script>
+</body>
+
+</html>
