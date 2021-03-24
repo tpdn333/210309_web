@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../0_HTML/1_CSS/7_Icon/all.min.css">
+    <style>
+        * {
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="result1"></div>
+    <hr>
+    <div id="result2"></div>
+    <hr>
+    <div id="result3"></div>
+    <hr>
+    <div id="result4"></div>
+    <hr>
+    <script>
+        var text = "";
+        var i = 0;
+        // var k = 1;
+        while (i < 5) {
+            var j = 0;
+            while (j <= i) {
+                text += '*';
+                j++;
+            }
+            text += '<br>';
+            i++;
+        }
+        document.getElementById("result1").innerHTML = text;
+
+        var text = "";
+        var i = 0;
+        // var k = 1;
+        while (i < 5) {
+            var j = 0;
+            while (j <= 4 - i) {
+                text += '*';
+                j++;
+            }
+            text += '<br>';
+            i++;
+        }
+        document.getElementById("result2").innerHTML = text;
+
+        var text = "";
+        var i = 0;
+        while (i < 5) {
+            var k = 0;
+            while (k < i) {
+                text += '&nbsp;';
+                k++;
+            }
+            var j = 0;
+            while (j < 5 - i) {
+                text += '*';
+                j++;
+            }
+            text += '<br>';
+            i++;
+        }
+        document.getElementById("result3").innerHTML = text;
+
+        var text = "";
+        var i = 0;
+        while (i < 5) {
+            var k = 0;
+            while (k < 4 - i) {
+                text += '&nbsp;';
+                k++;
+            }
+            var j = 0;
+            while (j <= i) {
+                text += '*';
+                j++;
+            }
+            text += '<br>';
+            i++;
+        }
+        document.getElementById("result4").innerHTML = text;
+    </script>
+
+</body>
+
+</html>
