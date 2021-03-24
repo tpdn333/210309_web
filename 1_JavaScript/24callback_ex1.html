@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../0_HTML/1_CSS/7_Icon/all.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <script>
+        function myFunc(a) {
+            console.log(a);
+            
+        }
+        function myFunc2(a) {
+            a();
+        }
+        myFunc(3);
+        myFunc("Hello");
+
+        
+        var f1 = function () {
+            console.log("f1 function");
+            
+        };
+        myFunc2(f1);
+        
+    </script>
+</body>
+
+</html>
