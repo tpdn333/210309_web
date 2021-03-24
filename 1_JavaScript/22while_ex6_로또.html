@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../0_HTML/1_CSS/7_Icon/all.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <h3 id="result"></h3>
+    <button onclick="lotto()">번호 출력</button>
+    <script>
+        function lotto() {
+            var number = [];
+            while (number.length < 6) {
+                var newNum = ranNum();
+
+                if (!number.includes(newNum)) {
+                    number.push(newNum);
+                }
+            }
+            document.getElementById("result").innerHTML = "";
+            for (i = 0; i < number.length; i++) {
+                document.getElementById("result").innerHTML += number[i] + '&nbsp';
+            }
+        }
+
+        function ranNum() {
+            return Math.floor(Math.random() * 45) + 1;
+
+        }
+    </script>
+</body>
+
+</html>
