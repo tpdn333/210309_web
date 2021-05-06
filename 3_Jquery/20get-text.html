@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../0_HTML/1_CSS/7_Icon/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $("#div1").click(function () {
+                var t = $("#div1").text();
+                console.log(t);
+            });
+
+
+            // tag 정보까지 
+            $("#div2").click(function () {
+                var t = $("#div2").html();
+                console.log(t);
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <div id="div1">
+        <p>Lorem, ipsum dolor.</p>
+    </div>
+    <div id="div2">
+        <p>Repudiandae, unde placeat?</p>
+    </div>
+</body>
+
+</html>
