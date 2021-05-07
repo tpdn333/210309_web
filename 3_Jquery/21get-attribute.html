@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../0_HTML/1_CSS/7_Icon/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("h1").click(function () {
+                var id = $(this).attr("id");
+                console.log(id);
+
+                var cla = $(this).attr("class");
+                console.log(cla);
+
+                var tit = $(this).attr("title");
+                console.log(tit);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1 id="head1" class="my_head1" title="hello">Lorem ipsum dolor sit.</h1>
+</body>
+
+</html>

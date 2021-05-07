@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../0_HTML/1_CSS/7_Icon/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#div1").click(function () {
+                $(this).text("<h1>new text</h1>");
+                // 파라미터가 있으면  파라미터 값으로 덮어 쓴다.
+                // 태그가 text로 들어간다
+            });
+
+            $("#div2").click(function () {
+                $(this).html("<h1>new html</h1>");
+                // 태그 정보가 element로 들어간다.
+            });
+
+            $("#div2").click(function () {
+                $(this).attr("id", "new-id");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="div1">
+        <p>Lorem ipsum dolor sit.</p>
+    </div>
+    <div id="div2">
+        <p>Odit officiis quibusdam accusantium?</p>
+    </div>
+</body>
+
+</html>
