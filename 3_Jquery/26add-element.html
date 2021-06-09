@@ -8,17 +8,24 @@
     </style>
     <script>
         $(document).ready(function () {
-            $("#head1").append("<br><span>abc</span>");
-            // 선택자 element 종료 태그다음
+            $("#head1").append($("<div/>", {
+                id: "div1",
+                title: "Hello",
+                text: "Hello World!"
+            }));
+            // 선택자 element 종료 태그전
 
-            $("#head1").prepend("def");
-            // 선택자 element 시작 태그 전
+
+            // 선택자 element 시작 태그 다음
         });
     </script>
 </head>
 
 <body>
-    <h1 id="head1">Lorem, ipsum.</h1>
+    <form>
+        <h1 id="head1">Lorem, ipsum.</h1>
+    </form>
+
 </body>
 
 </html>
