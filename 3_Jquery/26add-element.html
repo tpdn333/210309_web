@@ -8,11 +8,13 @@
     </style>
     <script>
         $(document).ready(function () {
-            $("#head1").append($("<div/>", {
-                id: "div1",
-                title: "Hello",
-                text: "Hello World!"
-            }));
+
+            $("#comment1").click(function (e) {
+                e.preventDefault();
+                // $("#comment9Form").atfet("<p>test Comment</p>") // form 요소 다음에
+                $("#comment9Form").append("<p>test Comment</p>") // form 종료tag 직전에
+
+            });
             // 선택자 element 종료 태그전
 
 
@@ -22,8 +24,20 @@
 </head>
 
 <body>
-    <form>
-        <h1 id="head1">Lorem, ipsum.</h1>
+    <form id="comment9Form">
+        <input name="commentId" value="9" hidden />
+        <input name="boardId" value="9" hidden />
+        <textarea name="comment" readonly>Test Comment</textarea>
+        <span>손세우</span>
+        <span>3분 전</span>
+
+        <button id="comment1">답글쓰기</button>
+
+        <div class="commentIf">
+            <button id="comment9Modify">수정</button>
+            <button id="comment9Submit" hidden>전송</button>
+            <button id="comment9Delete">삭제</button>
+        </div>
     </form>
 
 </body>
