@@ -3,16 +3,22 @@
 
 <head>
     <link rel="stylesheet" href="../0_HTML/1_CSS/7_Icon/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
     <style>
     </style>
     <script>
         $(document).ready(function () {
 
-            $("#comment1").click(function (e) {
+            $("#btn1").click(function (e) {
                 e.preventDefault();
                 // $("#comment9Form").atfet("<p>test Comment</p>") // form 요소 다음에
-                $("#comment9Form").append("<p>test Comment</p>") // form 종료tag 직전에
+                $("#div1").find("form").append('<input type="text" class="form-control" id="cbc2"/>'); // form 종료tag 직전에
 
             });
             // 선택자 element 종료 태그전
@@ -24,21 +30,27 @@
 </head>
 
 <body>
-    <form id="comment9Form">
-        <input name="commentId" value="9" hidden />
-        <input name="boardId" value="9" hidden />
-        <textarea name="comment" readonly>Test Comment</textarea>
-        <span>손세우</span>
-        <span>3분 전</span>
-
-        <button id="comment1">답글쓰기</button>
-
-        <div class="commentIf">
-            <button id="comment9Modify">수정</button>
-            <button id="comment9Submit" hidden>전송</button>
-            <button id="comment9Delete">삭제</button>
+    <div id="div1" class="container mt-3">
+        <div class="div2">
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small>
+                </div>
+                <div id="cbc1" class="form-group">
+                    <label for="exampleInputPassword1">답글</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button id="btn1" class="btn btn-primary">답글쓰기</button>
+            </form>
         </div>
-    </form>
+    </div>
 
 </body>
 
