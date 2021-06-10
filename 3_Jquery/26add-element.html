@@ -10,45 +10,60 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
-    <style>
-    </style>
     <script>
         $(document).ready(function () {
 
-            $("#btn1").click(function (e) {
-                e.preventDefault();
-                // $("#comment9Form").atfet("<p>test Comment</p>") // form 요소 다음에
-                $("#div1").find("form").append('<input type="text" class="form-control" id="cbc2"/>'); // form 종료tag 직전에
-
+            $(".comment_info_button").click(function () {
+                $(".comment_list").append($("<li>하위</li>"));
             });
-            // 선택자 element 종료 태그전
-
-
-            // 선택자 element 시작 태그 다음
         });
     </script>
+    <style>
+        .CommmentWriter {
+            margin-top: 10px;
+            padding: 10px 10px 10px 15px;
+            border: 2px solid burlywood;
+        }
+
+        .Comment_inbox {
+            margin-bottom: 10px;
+        }
+
+        .comment_inbo_text {
+
+            position: relative;
+            border: 0;
+            resize: none;
+            outline: 0;
+            font-size: 13px;
+            width: 100%;
+            padding: 0;
+        }
+
+        .btn_register {
+            justify-content: center;
+        }
+
+        .comment_attach {
+            position: relative;
+        }
+
+        .register_box {
+            float: right;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="div1" class="container mt-3">
-        <div class="div2">
-            <form>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                        else.</small>
-                </div>
-                <div id="cbc1" class="form-group">
-                    <label for="exampleInputPassword1">답글</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
-                </div>
-                <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button id="btn1" class="btn btn-primary">답글쓰기</button>
-            </form>
+    <div class="CommmentWriter">
+        <div class="Comment_inbox">
+            <p>어서오세우</p>
+            <textarea class="comment_inbo_text" placeholder="댓글을 남겨보세요"></textarea>
+        </div>
+        <div class="comment_attach">
+            <div class="register_box">
+                <a role="button" class="btn_register">등록</a>
+            </div>
         </div>
     </div>
 
