@@ -12,70 +12,34 @@
         crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
-            var cntReply = 1;
-            var $replyReigeter = $('#B1_C2_R1');
 
-            $replyReigeter.click(function () {
-                $("#div1").append('<button type="button" id="btn1">Push!!</button>')
-                $("#head1").hide();
-            });
+            var form = $("#form1").html();
+            var div3 = $("div1").children(":eq(0)");
 
-            $("#btn1").click(function () {
-                $("#head1").show();
-            });
+            div3.html(form);
+
+
         });
     </script>
-    <style>
-        .CommmentWriter {
-            margin-top: 10px;
-            padding: 10px 10px 10px 15px;
-            border: 2px solid burlywood;
-        }
-
-        .Comment_inbox {
-            margin-bottom: 10px;
-        }
-
-        .comment_inbo_text {
-
-            position: relative;
-            border: 0;
-            resize: none;
-            outline: 0;
-            font-size: 13px;
-            width: 100%;
-            padding: 0;
-        }
-
-        .btn_register {
-            justify-content: center;
-        }
-
-        .comment_attach {
-            position: relative;
-        }
-
-        .register_box {
-            float: right;
-        }
-    </style>
 </head>
 
 <body>
-    <div class="CommmentWriter">
-        <div class="Comment_inbox">
-            <p>어서오세우</p>
-            <textarea class="comment_inbo_text" placeholder="댓글을 남겨보세요"></textarea>
+
+    <form id="form1">
+        <div id="div1">
+            <h1 hidden id="head1">Lorem, ipsum.</h1>
+            <h1>Ex, eos?</h1>
         </div>
-        <div class="comment_attach">
-            <div class="register_box">
-                <a role="button" id="B1_C2_R1">등록</a>
+    </form>
+    <button id="btn1">눌러!</button>
+    <div id="div1">
+        <div id="div2">
+            <div id="div3">
+                <div id="div4">
+
+                </div>
             </div>
         </div>
-    </div>
-    <div id="div1">
-        <h1 id="head1">Lorem, ipsum.</h1>
-        <h1>Ex, eos?</h1>
     </div>
 
 
